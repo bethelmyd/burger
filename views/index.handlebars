@@ -26,9 +26,8 @@
         {{#each burgers}}
           {{#unless this.devoured}}
             <li class="list-group-item">
-              <h4>{{this.burger_name}}</h4>
-
-              <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+              <span class="burgerName">{{this.burger_name}}</span>
+              <form id="devourForm" action="burgers/update/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
                 <button class="btn-primary" type="submit">Devour Me!</button>
               </form>
@@ -43,7 +42,7 @@
       {{#each burgers}}
         {{#if this.devoured}}
           <li class="list-group-item">
-            <h4>{{this.burger_name}}</h4>
+            <span class="burgerName">{{this.burger_name}}</span>
           </li>
         {{/if}}
       {{/each}}

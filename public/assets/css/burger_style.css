@@ -30,3 +30,13 @@ li {
   background-color: #996600;
   border-color: #996600;
 }
+
+#devourForm{
+  float: right;
+  width: 20%;
+  text-align: right;
+}
+
+.burgerName{
+  font-size: 1.5em;
+}
